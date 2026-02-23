@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-02-19 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "sales_order",
+  "customer",
+  "customer_name",
+  "delivery_date",
+  "status",
+  "column_break_1",
+  "tags",
+  "notes",
+  "print_template_version",
+  "financials_section",
+  "revenue_total",
+  "estimated_cost_total",
+  "real_cost_total",
+  "gross_margin",
+  "gross_margin_pct",
+  "items_section",
+  "items",
+  "assigned_section",
+  "assigned_users",
+  "checklist_section",
+  "checklist_items",
+  "status_log_section",
+  "status_log",
+  "stages_section",
+  "stages",
+  "stage_log_section",
+  "stage_log",
+  "current_sector"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MWO-.YYYY.-"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Orden de Venta",
+   "options": "Sales Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cliente",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre cliente",
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha entrega"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Estado",
+   "options": "New\nDesign\nWaitingApproval\nApproved\nProduction\nDone\nDelivered\nCancelled",
+   "default": "New",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Small Text",
+   "label": "Etiquetas (separadas por coma)"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notas"
+  },
+  {
+   "fieldname": "print_template_version",
+   "fieldtype": "Data",
+   "label": "Versión plantilla impresión"
+  },
+  {
+   "fieldname": "financials_section",
+   "fieldtype": "Section Break",
+   "label": "Resumen Financiero"
+  },
+  {
+   "fieldname": "revenue_total",
+   "fieldtype": "Currency",
+   "label": "Total Venta",
+   "read_only": 1
+  },
+  {
+   "fieldname": "estimated_cost_total",
+   "fieldtype": "Currency",
+   "label": "Costo Estimado",
+   "read_only": 1
+  },
+  {
+   "fieldname": "real_cost_total",
+   "fieldtype": "Currency",
+   "label": "Costo Real",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gross_margin",
+   "fieldtype": "Currency",
+   "label": "Margen Bruto",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gross_margin_pct",
+   "fieldtype": "Float",
+   "label": "Margen %",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Ítems / Tercerización"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Ítems",
+   "options": "Mathipe WO Item"
+  },
+  {
+   "fieldname": "assigned_section",
+   "fieldtype": "Section Break",
+   "label": "Equipo asignado"
+  },
+  {
+   "fieldname": "assigned_users",
+   "fieldtype": "Table",
+   "label": "Usuarios asignados",
+   "options": "Mathipe WO Assigned User"
+  },
+  {
+   "fieldname": "checklist_section",
+   "fieldtype": "Section Break",
+   "label": "Checklist de control"
+  },
+  {
+   "fieldname": "checklist_items",
+   "fieldtype": "Table",
+   "label": "Checklist",
+   "options": "Mathipe WO Checklist Item"
+  },
+  {
+   "fieldname": "status_log_section",
+   "fieldtype": "Section Break",
+   "label": "Historial de estado"
+  },
+  {
+   "fieldname": "status_log",
+   "fieldtype": "Table",
+   "label": "Historial",
+   "options": "Mathipe WO Status Log",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stages_section",
+   "fieldtype": "Section Break",
+   "label": "Ruta de Producción (Fase 9)"
+  },
+  {
+   "fieldname": "stages",
+   "fieldtype": "Table",
+   "label": "Etapas",
+   "options": "Mathipe WO Stage"
+  },
+  {
+   "fieldname": "stage_log_section",
+   "fieldtype": "Section Break",
+   "label": "Historial por etapa"
+  },
+  {
+   "fieldname": "stage_log",
+   "fieldtype": "Table",
+   "label": "Log etapas",
+   "options": "Mathipe WO Stage Log",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_sector",
+   "fieldtype": "Data",
+   "label": "Sector actual",
+   "read_only": 1
+  }
+ ],
+ "module": "Mathipe UI",
+ "name": "Mathipe Work Order",
+ "naming_rule": "By Naming Series field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Desk User"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

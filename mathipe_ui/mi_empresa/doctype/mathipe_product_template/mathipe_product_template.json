@@ -1,0 +1,39 @@
+{
+  "actions": [],
+  "autoname": "field:product_name",
+  "creation": "2026-02-20 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "product_name",
+    "category",
+    "costing_mode",
+    "allow_dimensions",
+    "allow_qty",
+    "default_margin_pct",
+    "default_route_template",
+    "manual_base_price",
+    "manual_base_cost",
+    "components"
+  ],
+  "fields": [
+    {"fieldname": "product_name", "fieldtype": "Data", "in_list_view": 1, "label": "Nombre producto", "reqd": 1, "unique": 1},
+    {"fieldname": "category", "fieldtype": "Data", "label": "Categoría"},
+    {"fieldname": "costing_mode", "fieldtype": "Select", "in_list_view": 1, "label": "Modo costo", "options": "Manual\nAutomatic\nHybrid"},
+    {"fieldname": "allow_dimensions", "fieldtype": "Check", "label": "Permitir dimensiones"},
+    {"fieldname": "allow_qty", "fieldtype": "Check", "label": "Permitir cantidad"},
+    {"fieldname": "default_margin_pct", "fieldtype": "Float", "default": 30, "label": "Margen % por defecto"},
+    {"fieldname": "default_route_template", "fieldtype": "Link", "label": "Ruta por defecto", "options": "Mathipe Route Template"},
+    {"fieldname": "manual_base_price", "fieldtype": "Currency", "label": "Precio base manual"},
+    {"fieldname": "manual_base_cost", "fieldtype": "Currency", "label": "Costo base manual"},
+    {"fieldname": "components", "fieldtype": "Table", "label": "Componentes", "options": "Mathipe Product Component"}
+  ],
+  "module": "Mi Empresa",
+  "name": "Mathipe Product Template",
+  "owner": "Administrator",
+  "permissions": [{"create": 1, "delete": 1, "read": 1, "report": 1, "role": "System Manager", "write": 1}],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

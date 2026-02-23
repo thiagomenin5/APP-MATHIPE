@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:product_name",
+ "creation": "2025-02-18 00:00:00.000000",
+ "doctype": "DocType",
+ "custom": 0,
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "product_name",
+  "base_setup_cost",
+  "print_cost_per_side"
+ ],
+ "fields": [
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Product Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "base_setup_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Base Setup Cost",
+   "options": "currency"
+  },
+  {
+   "fieldname": "print_cost_per_side",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Print Cost Per Side",
+   "options": "currency"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2025-02-18 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Mathipe UI",
+ "name": "Mathipe Print Product",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Desk User"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

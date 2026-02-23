@@ -1,7 +1,46 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# ---- Env / Secrets ----
+.env
+.env.*
+*.env
+
+# ---- OS / IDE ----
 .DS_Store
-*.pyc
-*.egg-info
+Thumbs.db
+.idea/
+.vscode/
+
+# ---- Logs ----
+*.log
+logs/
+
+# ---- Node / Frontend ----
+node_modules/
+dist/
+build/
+.cache/
+.vite/
+*.map
+
+# ---- Frappe / Bench generated artifacts (within app) ----
+public/dist/
+public/build/
+public/assets/
+*.min.js
+*.min.css
+
+# ---- Local tooling ----
 *.swp
-tags
-node_modules
-__pycache__
+*.swo
+# SPA build (Vite)
+mathipe_ui/public/spa/assets/
+mathipe_ui/public/spa/index.html

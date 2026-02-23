@@ -1,0 +1,26 @@
+<div class="mathipe-dashboard container-fluid py-3">
+  <div class="d-flex align-items-center justify-content-between mb-4">
+    <div>
+      <h2 class="mb-1">Dashboard</h2>
+      <div class="text-muted small">Gráfica Mathipe · Vista general</div>
+    </div>
+    <span class="badge bg-light text-dark border rounded-pill px-3">MATHIPE</span>
+  </div>
+
+  <div class="row g-3" id="mathipe-dashboard-cards">
+    <!-- Cards se llenan por JS desde dashboard.get_metrics() -->
+    <div class="col-12 text-center py-5 text-muted" id="mathipe-dashboard-loading">
+      Cargando métricas…
+    </div>
+  </div>
+</div>
+
+<style>
+  .mathipe-dashboard .card {
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  }
+  .mathipe-dashboard .card-title { font-size: 0.9rem; font-weight: 600; }
+  .mathipe-dashboard .metric-value { font-size: 1.75rem; font-weight: 800; }
+</style>

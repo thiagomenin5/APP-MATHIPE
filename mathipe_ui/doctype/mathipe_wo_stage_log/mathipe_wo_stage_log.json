@@ -1,0 +1,26 @@
+{
+  "actions": [],
+  "creation": "2026-02-20 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "editable_grid": 0,
+  "engine": "InnoDB",
+  "field_order": ["from_status", "to_status", "sector_key", "changed_by", "changed_at", "comment", "stage_row_id"],
+  "fields": [
+    {"fieldname": "from_status", "fieldtype": "Data", "in_list_view": 1, "label": "Desde"},
+    {"fieldname": "to_status", "fieldtype": "Data", "in_list_view": 1, "label": "Hacia"},
+    {"fieldname": "sector_key", "fieldtype": "Data", "in_list_view": 1, "label": "Sector"},
+    {"fieldname": "changed_by", "fieldtype": "Link", "in_list_view": 1, "label": "Usuario", "options": "User"},
+    {"fieldname": "changed_at", "fieldtype": "Datetime", "in_list_view": 1, "label": "Fecha/hora"},
+    {"fieldname": "comment", "fieldtype": "Small Text", "label": "Comentario"},
+    {"fieldname": "stage_row_id", "fieldtype": "Data", "label": "Stage row id"}
+  ],
+  "istable": 1,
+  "module": "Mathipe UI",
+  "name": "Mathipe WO Stage Log",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "changed_at",
+  "sort_order": "DESC",
+  "track_changes": 0
+}

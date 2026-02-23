@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:material_name",
+ "creation": "2025-02-18 00:00:00.000000",
+ "doctype": "DocType",
+ "custom": 0,
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "material_name",
+  "cost_per_sheet",
+  "category"
+ ],
+ "fields": [
+  {
+   "fieldname": "material_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Material Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "cost_per_sheet",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost Per Sheet",
+   "options": "currency"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Papel\nVinilo\nLona"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2025-02-18 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Mathipe UI",
+ "name": "Mathipe Print Material",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Desk User"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

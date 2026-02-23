@@ -1,0 +1,39 @@
+{
+  "actions": [],
+  "autoname": "field:machine_name",
+  "creation": "2026-02-20 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "engine": "InnoDB",
+  "field_order": [
+    "machine_name",
+    "machine_type",
+    "sector_key",
+    "cost_per_hour",
+    "setup_time_minutes",
+    "speed_mode",
+    "speed_value",
+    "max_width",
+    "max_height",
+    "active"
+  ],
+  "fields": [
+    {"fieldname": "machine_name", "fieldtype": "Data", "in_list_view": 1, "label": "Nombre máquina", "reqd": 1, "unique": 1},
+    {"fieldname": "machine_type", "fieldtype": "Select", "in_list_view": 1, "label": "Tipo", "options": "Plotter\nDigital\nOffset\nGuillotina\nTerminación\nOtro", "reqd": 1},
+    {"fieldname": "sector_key", "fieldtype": "Link", "in_list_view": 1, "label": "Sector", "options": "Mathipe Sector", "reqd": 1},
+    {"fieldname": "cost_per_hour", "fieldtype": "Currency", "label": "Costo por hora"},
+    {"fieldname": "setup_time_minutes", "fieldtype": "Int", "label": "Tiempo setup (min)"},
+    {"fieldname": "speed_mode", "fieldtype": "Select", "label": "Modo velocidad", "options": "AreaPerHour\nSheetsPerHour\nUnitsPerHour"},
+    {"fieldname": "speed_value", "fieldtype": "Float", "label": "Valor velocidad"},
+    {"fieldname": "max_width", "fieldtype": "Float", "label": "Ancho máx"},
+    {"fieldname": "max_height", "fieldtype": "Float", "label": "Alto máx"},
+    {"fieldname": "active", "fieldtype": "Check", "default": 1, "label": "Activa", "in_list_view": 1}
+  ],
+  "module": "Mi Empresa",
+  "name": "Mathipe Machine",
+  "owner": "Administrator",
+  "permissions": [{"create": 1, "delete": 1, "read": 1, "report": 1, "role": "System Manager", "write": 1}],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

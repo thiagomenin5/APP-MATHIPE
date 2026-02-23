@@ -1,0 +1,27 @@
+{
+  "actions": [],
+  "creation": "2026-02-20 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": ["sector_key", "sector_name", "stage_status", "assigned_to", "started_at", "finished_at", "notes", "idx"],
+  "fields": [
+    {"fieldname": "sector_key", "fieldtype": "Data", "in_list_view": 1, "label": "Sector (key)", "reqd": 1},
+    {"fieldname": "sector_name", "fieldtype": "Data", "in_list_view": 1, "label": "Sector (nombre)"},
+    {"fieldname": "stage_status", "fieldtype": "Select", "in_list_view": 1, "label": "Estado etapa", "options": "Pending\nIn Progress\nDone\nSkipped", "default": "Pending", "reqd": 1},
+    {"fieldname": "assigned_to", "fieldtype": "Link", "in_list_view": 1, "label": "Asignado a", "options": "User"},
+    {"fieldname": "started_at", "fieldtype": "Datetime", "label": "Iniciado at"},
+    {"fieldname": "finished_at", "fieldtype": "Datetime", "label": "Finalizado at"},
+    {"fieldname": "notes", "fieldtype": "Small Text", "label": "Notas"},
+    {"fieldname": "idx", "fieldtype": "Int", "label": "Orden", "read_only": 1}
+  ],
+  "istable": 1,
+  "module": "Mathipe UI",
+  "name": "Mathipe WO Stage",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "idx",
+  "sort_order": "ASC",
+  "track_changes": 0
+}

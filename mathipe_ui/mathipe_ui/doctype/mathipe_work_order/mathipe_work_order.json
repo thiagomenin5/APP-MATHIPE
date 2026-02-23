@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-02-19 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "sales_order",
+  "customer",
+  "customer_name",
+  "delivery_date",
+  "status",
+  "column_break_1",
+  "tags",
+  "notes",
+  "print_template_version",
+  "assigned_section",
+  "assigned_users",
+  "checklist_section",
+  "checklist_items"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MWO-.YYYY.-"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Orden de Venta",
+   "options": "Sales Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cliente",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre cliente",
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fecha entrega"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Estado",
+   "options": "New\nDesign\nWaitingApproval\nApproved\nProduction\nDone\nDelivered\nCancelled",
+   "default": "New",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Small Text",
+   "label": "Etiquetas (separadas por coma)"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notas"
+  },
+  {
+   "fieldname": "print_template_version",
+   "fieldtype": "Data",
+   "label": "Versión plantilla impresión"
+  },
+  {
+   "fieldname": "assigned_section",
+   "fieldtype": "Section Break",
+   "label": "Equipo asignado"
+  },
+  {
+   "fieldname": "assigned_users",
+   "fieldtype": "Table",
+   "label": "Usuarios asignados",
+   "options": "Mathipe WO Assigned User"
+  },
+  {
+   "fieldname": "checklist_section",
+   "fieldtype": "Section Break",
+   "label": "Checklist de control"
+  },
+  {
+   "fieldname": "checklist_items",
+   "fieldtype": "Table",
+   "label": "Checklist",
+   "options": "Mathipe WO Checklist Item"
+  }
+ ],
+ "module": "Mathipe UI",
+ "name": "Mathipe Work Order",
+ "naming_rule": "By Naming Series field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Desk User"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

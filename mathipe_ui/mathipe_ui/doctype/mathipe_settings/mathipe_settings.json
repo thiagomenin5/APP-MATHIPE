@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "creation": "2026-02-13 20:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "defaults_section",
+  "default_customer",
+  "default_selling_price_list",
+  "column_break_defaults",
+  "vat_rate",
+  "currency",
+  "external_invoicing_section",
+  "enable_external_invoicing",
+  "invoice_provider"
+ ],
+ "fields": [
+  {
+   "fieldname": "defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Defaults"
+  },
+  {
+   "fieldname": "default_customer",
+   "fieldtype": "Link",
+   "label": "Default Customer",
+   "options": "Customer",
+   "description": "Cliente por defecto (ej: Consumidor Final, Mostrador)"
+  },
+  {
+   "fieldname": "default_selling_price_list",
+   "fieldtype": "Link",
+   "label": "Default Selling Price List",
+   "options": "Price List",
+   "description": "Lista de precios por defecto para cotizador y ventas"
+  },
+  {
+   "fieldname": "column_break_defaults",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "21",
+   "fieldname": "vat_rate",
+   "fieldtype": "Percent",
+   "label": "VAT Rate (%)",
+   "description": "IVA por defecto (ej: 21)"
+  },
+  {
+   "default": "ARS",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "external_invoicing_section",
+   "fieldtype": "Section Break",
+   "label": "Facturación externa"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_external_invoicing",
+   "fieldtype": "Check",
+   "label": "Enable External Invoicing",
+   "description": "Habilitar integración con ARCA / tusfacturas (fase posterior)"
+  },
+  {
+   "depends_on": "eval:doc.enable_external_invoicing",
+   "fieldname": "invoice_provider",
+   "fieldtype": "Select",
+   "label": "Invoice Provider",
+   "options": "\nARCA\ntusfacturas",
+   "description": "Proveedor de facturación electrónica"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-02-13 20:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Mathipe UI",
+ "name": "Mathipe Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

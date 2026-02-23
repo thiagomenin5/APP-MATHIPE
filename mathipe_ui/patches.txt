@@ -4,3 +4,17 @@
 
 [post_model_sync]
 # Patches added in this section will be executed after doctypes are migrated
+mathipe_ui.patches.import_mathipe_workspace
+mathipe_ui.patches.add_mathipe_product_type_to_item
+mathipe_ui.patches.add_mathipe_quote_links
+mathipe_ui.patches.ensure_fase1_indexes
+mathipe_ui.patches.install_mathipe_wo_item_and_status_log
+mathipe_ui.patches.ensure_fase2_outsourcing_indexes
+mathipe_ui.patches.ensure_wo_item_quote_item_index
+mathipe_ui.patches.add_fase3_financial_fields
+mathipe_ui.patches.add_fase5_alert_settings
+mathipe_ui.patches.add_saas_branding_and_subscription
+mathipe_ui.patches.add_fase9_stages
+mathipe_ui.patches.add_fase10_dispatch
+mathipe_ui.patches.add_fase11_company_setup
+mathipe_ui.patches.add_fase11b_quote_item_template_fields

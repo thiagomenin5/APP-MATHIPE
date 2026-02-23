@@ -1,0 +1,24 @@
+{
+  "actions": [],
+  "creation": "2026-02-19 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "Document",
+  "editable_grid": 0,
+  "engine": "InnoDB",
+  "field_order": ["from_status", "to_status", "changed_by", "changed_at", "comment"],
+  "fields": [
+    {"fieldname": "from_status", "fieldtype": "Data", "in_list_view": 1, "label": "Desde", "reqd": 1},
+    {"fieldname": "to_status", "fieldtype": "Data", "in_list_view": 1, "label": "Hacia", "reqd": 1},
+    {"fieldname": "changed_by", "fieldtype": "Link", "in_list_view": 1, "label": "Usuario", "options": "User", "reqd": 1},
+    {"fieldname": "changed_at", "fieldtype": "Datetime", "in_list_view": 1, "label": "Fecha/hora", "reqd": 1},
+    {"fieldname": "comment", "fieldtype": "Small Text", "label": "Comentario"}
+  ],
+  "istable": 1,
+  "module": "Mathipe UI",
+  "name": "Mathipe WO Status Log",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 0
+}

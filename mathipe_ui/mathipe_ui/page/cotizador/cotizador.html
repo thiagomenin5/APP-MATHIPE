@@ -1,0 +1,116 @@
+<div class="mathipe-cotizador container-fluid py-3">
+  <div class="row g-3">
+    <!-- Left (70%) -->
+    <div class="col-12 col-lg-8">
+      <div class="card mathipe-card p-3 p-md-4">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <div>
+            <h3 class="mb-1">Cotizador</h3>
+            <div class="text-muted small">Gráfica Mathipe · ERPNext</div>
+          </div>
+          <span class="badge bg-light text-dark border">v1</span>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <label class="form-label">Producto</label>
+            <select id="m_producto" class="form-select">
+              <option value="">Seleccionar…</option>
+            </select>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label class="form-label">Papel</label>
+            <select id="m_papel" class="form-select" disabled>
+              <option value="">Seleccionar…</option>
+            </select>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label class="form-label">Terminación</label>
+            <select id="m_terminacion" class="form-select" disabled>
+              <option value="">(Opcional) Seleccionar…</option>
+            </select>
+            <div class="form-text">Se habilita si el producto tiene atributo Terminación/Terminacion.</div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label class="form-label">Cantidad</label>
+            <select id="m_cantidad" class="form-select">
+              <option value="100">100</option>
+              <option value="250">250</option>
+              <option value="500" selected>500</option>
+              <option value="1000">1000</option>
+              <option value="2000">2000</option>
+              <option value="5000">5000</option>
+            </select>
+          </div>
+        </div>
+
+        <hr class="my-4"/>
+
+        <div class="d-flex align-items-center gap-2">
+          <div class="text-muted small">
+            * El precio se toma del ERP (Item Price / motor de pricing).
+          </div>
+          <div class="ms-auto">
+            <button class="btn btn-outline-secondary btn-sm" id="m_reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right (30%) -->
+    <div class="col-12 col-lg-4">
+      <div class="card mathipe-card p-3 p-md-4 mathipe-sticky">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <div>
+            <h5 class="mb-0">Resumen</h5>
+            <div class="text-muted small" id="m_variant_label">Elegí opciones</div>
+          </div>
+          <span class="badge bg-primary-subtle text-primary border">IVA 21%</span>
+        </div>
+
+        <div class="mathipe-price-lines">
+          <div class="d-flex justify-content-between py-2 border-bottom">
+            <div class="text-muted">Neto</div>
+            <div id="m_neto">$ —</div>
+          </div>
+          <div class="d-flex justify-content-between py-2 border-bottom">
+            <div class="text-muted">IVA (21%)</div>
+            <div id="m_iva">$ —</div>
+          </div>
+          <div class="d-flex justify-content-between py-3">
+            <div class="fw-semibold">TOTAL</div>
+            <div class="mathipe-total" id="m_total">$ —</div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-lg w-100 mt-2" id="m_crear_orden" disabled>
+          Crear Orden de Venta
+        </button>
+
+        <div class="text-muted small mt-3">
+          Se generará una <b>Sales Order</b> con el ítem variante y la cantidad seleccionada.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .mathipe-card{
+    border-radius:12px;
+    border:1px solid rgba(0,0,0,.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  }
+  .mathipe-sticky{
+    position: sticky;
+    top: 90px;
+  }
+  .mathipe-total{
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: .2px;
+  }
+</style>

@@ -1,0 +1,169 @@
+{
+"actions": [],
+"creation": "2026-02-19 00:00:00.000000",
+"doctype": "DocType",
+"document_type": "Document",
+"editable_grid": 1,
+"engine": "InnoDB",
+"field_order": [
+"quote_item",
+"item_code",
+"description",
+"product_type",
+"qty",
+"width",
+"height",
+"area_total",
+"cost_total",
+"sale_total",
+"uom",
+"source",
+"breakdown_version",
+"breakdown_json",
+"column_break_os",
+"is_outsourced",
+"supplier",
+"outsource_status",
+"outsource_sent_at",
+"outsource_received_at",
+"outsource_cost",
+"outsource_notes"
+],
+"fields": [
+{
+"fieldname": "quote_item",
+"fieldtype": "Link",
+"label": "Quote Item",
+"options": "Mathipe Quote Item"
+},
+{
+"fieldname": "item_code",
+"fieldtype": "Link",
+"in_list_view": 1,
+"label": "\u00cdtem",
+"options": "Item"
+},
+{
+"fieldname": "description",
+"fieldtype": "Text",
+"in_list_view": 1,
+"label": "Descripci\u00f3n"
+},
+{
+"fieldname": "product_type",
+"fieldtype": "Select",
+"label": "Tipo",
+"options": "Fixed\nArea\nRecipe"
+},
+{
+"fieldname": "qty",
+"fieldtype": "Float",
+"in_list_view": 1,
+"label": "Cantidad",
+"precision": 3
+},
+{
+"fieldname": "width",
+"fieldtype": "Float",
+"label": "Ancho (mm)",
+"precision": 2
+},
+{
+"fieldname": "height",
+"fieldtype": "Float",
+"label": "Alto (mm)",
+"precision": 2
+},
+{
+"fieldname": "area_total",
+"fieldtype": "Float",
+"label": "m\u00b2 total",
+"precision": 4
+},
+{
+"fieldname": "cost_total",
+"fieldtype": "Currency",
+"label": "Costo total",
+"options": "currency"
+},
+{
+"fieldname": "sale_total",
+"fieldtype": "Currency",
+"label": "Total venta",
+"options": "currency"
+},
+{
+"fieldname": "uom",
+"fieldtype": "Data",
+"label": "UdM"
+},
+{
+"fieldname": "source",
+"fieldtype": "Data",
+"label": "Origen (Quote/SO)"
+},
+{
+"fieldname": "breakdown_version",
+"fieldtype": "Int",
+"label": "Breakdown version"
+},
+{
+"fieldname": "breakdown_json",
+"fieldtype": "Small Text",
+"label": "Breakdown JSON"
+},
+{
+"fieldname": "column_break_os",
+"fieldtype": "Column Break"
+},
+{
+"fieldname": "is_outsourced",
+"fieldtype": "Check",
+"in_list_view": 1,
+"label": "Tercerizado"
+},
+{
+"fieldname": "supplier",
+"fieldtype": "Link",
+"in_list_view": 1,
+"label": "Proveedor",
+"options": "Supplier"
+},
+{
+"fieldname": "outsource_status",
+"fieldtype": "Select",
+"in_list_view": 1,
+"label": "Estado tercerizaci\u00f3n",
+"options": "PendingVendor\nSent\nReceived"
+},
+{
+"fieldname": "outsource_sent_at",
+"fieldtype": "Datetime",
+"label": "Enviado at"
+},
+{
+"fieldname": "outsource_received_at",
+"fieldtype": "Datetime",
+"label": "Recibido at"
+},
+{
+"fieldname": "outsource_cost",
+"fieldtype": "Currency",
+"label": "Costo proveedor",
+"options": "currency"
+},
+{
+"fieldname": "outsource_notes",
+"fieldtype": "Small Text",
+"label": "Notas tercerizaci\u00f3n"
+}
+],
+"istable": 1,
+"module": "Mathipe UI",
+"name": "Mathipe WO Item",
+"owner": "Administrator",
+"permissions": [],
+"sort_field": "modified",
+"sort_order": "DESC",
+"track_changes": 0
+}
