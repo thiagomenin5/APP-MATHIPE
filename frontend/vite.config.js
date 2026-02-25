@@ -29,19 +29,19 @@ export default defineConfig({
     proxy: {
       // Proxy API y assets al backend ERPNext (evita CORS en desarrollo)
       "/api": {
-        target: "https://app.graficamathipe.com.ar",
+        target: "http://localhost:8000",
         changeOrigin: true,
-        secure: true,
+        secure: false,
       },
       "/assets": {
-        target: "https://app.graficamathipe.com.ar",
+        target: "http://localhost:8000",
         changeOrigin: true,
-        secure: true,
+        secure: false,
       },
       "/files": {
-        target: "https://app.graficamathipe.com.ar",
+        target: "http://localhost:8000",
         changeOrigin: true,
-        secure: true,
+        secure: false,
       },
     },
   },
